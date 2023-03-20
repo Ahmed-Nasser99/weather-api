@@ -1,0 +1,149 @@
+* {
+  list-style: none;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.908);
+  padding: 25px;
+}
+nav li {
+  color: white;
+}
+nav ul {
+  width: 50% !important;
+}
+.home {
+  background-image: url(../image/banner.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+.btn-search {
+  top: 5px;
+  right: 7px;
+  width: 90px;
+  height: 45px;
+}
+::placeholder {
+  color: aliceblue !important;
+}
+.boxs {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  border-radius: 10px;
+}
+.box {
+  width: 33.3%;
+  background: antiquewhite;
+}
+#degreeCur {
+  font-size: 5rem;
+}
+.box header {
+  background-color: cadetblue;
+  padding: 10px;
+  border-top-left-radius: 10px;
+}
+.body-card {
+  padding: 13px;
+}
+.special {
+  background-color: cadetblue;
+}
+.special header {
+  background: beige;
+  border-radius: 0;
+  padding: 10px;
+}
+.box #header-card1 {
+  border-top-left-radius: 0;
+  background-color: cadetblue;
+  padding: 10px;
+  border-top-right-radius: 10px;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.908);
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: #0cdaf0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 7px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.icon i {
+  font-size: 1.7rem;
+}
+.btn-email {
+  top: 5px;
+  right: 7px;
+  width: 90px;
+  height: 45px;
+}
+.icon:hover {
+  background-color: #0cdaf0;
+  color: aliceblue;
+}
+.munie i {
+  position: absolute;
+  right: 10%;
+  font-size: 2rem;
+  color: aliceblue;
+}
+.munie {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.munie i {
+  display: none;
+}
+.munie ul {
+  display: flex;
+}
+.munie .listshow {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .boxs {
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .icon {
+    height: 35px;
+  }
+  .icon i {
+    font-size: 1rem;
+  }
+  .munie {
+    display: flex;
+  }
+  .munie i {
+    display: block;
+  }
+  .munie ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: -81px;
+    top: 10%;
+  }
+  .munie ul li {
+    margin-bottom: 5px;
+  }
+  .box {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    overflow: hidden;
+  }
+}

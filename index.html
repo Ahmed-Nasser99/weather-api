@@ -1,0 +1,174 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-bar d-flex align-items-center">
+          <div class="logo d-flex align-items-center">
+            <img
+              src="image/logo.png"
+              alt="Weather-logo"
+              class="me-3"
+              width="70px"
+            />
+            <h6 class="text-white">Weather App</h6>
+          </div>
+
+          <div class="munie">
+            <i
+              id="navBtn"
+              class="fa-solid fa-bars"
+              style="cursor: pointer"
+              onclick="navBar();"
+            ></i>
+            <ul
+              class="justify-content-around w-50 ms-auto align-items-center"
+              id="listNav"
+            >
+              <li class="btn btn-outline-info rounded-5 active">Home</li>
+              <li class="btn btn-outline-info rounded-5">News</li>
+              <li class="btn btn-outline-info rounded-5">Live Cameras</li>
+              <li class="btn btn-outline-info rounded-5">Photo</li>
+              <li class="btn btn-outline-info rounded-5">Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="home py-5">
+      <div class="container">
+        <div class="home-display">
+          <div class="input-search w-75 m-auto position-relative">
+            <input
+              type="search"
+              class="form-control rounded-5 p-3 bg-dark border-0 text-white"
+              placeholder="Find Your Location..."
+              id="search-input"
+              onkeyup="getdata(this.value)"
+            />
+            <button
+              class="btn btn-outline-info position-absolute rounded-5 btn-search"
+            >
+              Find
+            </button>
+          </div>
+          <div class="boxs my-4">
+            <div
+              id="current-box"
+              class="box"
+              style="border-top-left-radius: 10px"
+            >
+              <header id="header-card" class="d-flex justify-content-between">
+                <h6 id="dayCur"></h6>
+                <h6 id="monthCur"></h6>
+              </header>
+              <div class="body-card">
+                <h6 id="countryCur" class="lead fw-bold"></h6>
+
+                <div class="degree d-flex my-2">
+                  <h1 id="degreeCur"></h1>
+                  <div id="image-weather"></div>
+                </div>
+                <span id="cond-name" class="text-info fw-medium"></span>
+                <div
+                  class="wind d-flex align-items-center justify-content-around p-3"
+                >
+                  <div class="item">
+                    <i class="fa-solid fa-umbrella"></i>
+                    <span id="wind-pres"></span>
+                  </div>
+                  <div class="item">
+                    <i class="fa-solid fa-wind"></i>
+                    <span id="wind-kph"></span>
+                  </div>
+                  <div class="item">
+                    <i class="fa-solid fa-compass"></i>
+                    <span id="wind-dir"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box special">
+              <header id="header-card" class="d-flex justify-content-between">
+                <h6 id="dayCur2"></h6>
+                <h6 id="monthCur2"></h6>
+              </header>
+              <div class="body-card text-center">
+                <div id="image-weather2" class="mb-3"></div>
+                <h3 id="max-degree"></h3>
+                <h5 id="min-degree" class="text-muted"></h5>
+                <span id="cond-name2" class="text-info fw-medium my-3"></span>
+              </div>
+            </div>
+            <div class="box" style="border-top-right-radius: 10px">
+              <header id="header-card1" class="d-flex justify-content-between">
+                <h6 id="dayCur3"></h6>
+                <h6 id="monthCur3"></h6>
+              </header>
+              <div class="body-card text-center">
+                <div id="image-weather3" class="mb-3"></div>
+                <h3 id="max-degree2"></h3>
+                <h5 id="min-degree2" class="text-muted"></h5>
+                <span id="cond-name3" class="text-info fw-medium my-3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="input-search position-relative">
+              <input
+                type="search"
+                class="form-control rounded-5 p-3 bg-dark border-0 text-white position-relative"
+                placeholder="Enter your email to subscribe..."
+              />
+              <button
+                class="btn btn-outline-info position-absolute rounded-5 btn-email"
+              >
+                Subscribe
+              </button>
+            </div>
+            <p class="my-5 text-white">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+          <div class="col-md-3">
+            <div class="icons d-flex align-items-center">
+              <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+              <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="icon"><i class="fa-brands fa-google"></i></div>
+              <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
